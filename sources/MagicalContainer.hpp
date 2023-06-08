@@ -26,6 +26,11 @@ private:
     bool _flage = true; // Flag to determine if the first prime index has been set
 
 public:
+    MagicalContainer() = default ;
+    MagicalContainer(const MagicalContainer &other) = default;
+    MagicalContainer(MagicalContainer &&other) noexcept = default;
+    MagicalContainer &operator=(const MagicalContainer &other) = default;
+    MagicalContainer &operator=(MagicalContainer &&other) noexcept = default;
     size_t getFirstPrime(); 
     int getPrimeCounter(); 
     size_t setPrime(size_t, int); 

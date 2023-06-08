@@ -5,9 +5,11 @@ using namespace ariel;
 namespace ariel
 {
 
-MagicalContainer::MagicalContainer()
+// This function iterating over each element pointer in the _elements container using a range-based for loop.
+// Inside the loop, it calls the free() function to deallocate the memory pointed to by each element pointer. This suggests that the elements stored in _elements were allocated dynamically using malloc() or a similar function.
+MagicalContainer::~MagicalContainer()
 {
-    for (auto i : _elements)
+    for (auto* i : _elements)
     {
         free(i);
     }
